@@ -1,11 +1,9 @@
 import React from "react";
-import LoginFormFunction from "./components/LoginFormFunction"
 function App() {
   return (
     <div className="App">
       <div className="App-header">
-    
-     <LoginFormFunction/>
+    <h1>My App</h1>
       </div>
     </div>
   );

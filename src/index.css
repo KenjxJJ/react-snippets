@@ -18,36 +18,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
  
 }
-h1{
-  text-align: center;
-  color: var(--color-white);
-
-}
-form{
-  width: 40vw;
-  margin: 0 auto;
-  border: 1px solid var(--color-grey);
-  padding: 40px;
-}
-form h1{
-  margin-bottom: 10px;
-}
-form input{
-  width: 100%;
-  font: 20px;
-  border: 1px solid var(--color-dark);
-  padding: 25px;
-  margin-bottom: 25px;
-  font-size: large;
-  cursor: pointer;
-}
-form input[type="submit"]{
-  border-radius: 10px;
-  background-color: var(--color-grey);
-  color: var(--color-white);
-  font-weight: bolder;
-  
-}
 .App {
   text-align: center;
 }
