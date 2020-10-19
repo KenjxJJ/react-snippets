@@ -1,5 +1,8 @@
 :root{
-  --bg-dark:#282c34;
+  --color-dark:#282c34;
+  --color-grey:#6b6969;
+  --color-green:#008000;
+  --color-white:#f0ebeb;
 }
 * ,html{
   box-sizing: border-box;
@@ -15,18 +18,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
  
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 h1{
   text-align: center;
+  color: var(--color-white);
+
 }
 form{
   width: 40vw;
   margin: 0 auto;
-  border: 1px solid #6b6969;
+  border: 1px solid var(--color-grey);
   padding: 40px;
 }
 form h1{
@@ -34,7 +34,8 @@ form h1{
 }
 form input{
   width: 100%;
-  border: 1px solid #6b6969;
+  font: 20px;
+  border: 1px solid var(--color-dark);
   padding: 25px;
   margin-bottom: 25px;
   font-size: large;
@@ -42,32 +43,23 @@ form input{
 }
 form input[type="submit"]{
   border-radius: 10px;
-  background-color: #008000;
-  color: #f0ebeb;
+  background-color: var(--color-grey);
+  color: var(--color-white);
+  font-weight: bolder;
   
 }
 .App {
   text-align: center;
 }
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: var(--color-dark);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--color-white);
 }
 
-.App-link {
-  color: #61dafb;
-}
+

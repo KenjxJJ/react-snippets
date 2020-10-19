@@ -33,6 +33,7 @@ const LoginForm =()=> {
         {/* Our JSX */}
 
         <form className="form" onSubmit={submitData}>
+        <h1> Login Form</h1>
           <input
             type="email"
             onChange={getEmail}

@@ -36,6 +36,7 @@ class LoginForm extends Component {
         {/* Our JSX */}
 
         <form className="form" onSubmit={this.submitData}>
+          <h1> Login Form</h1>
           <input
             type="email"
             onChange={this.getEmail}
