@@ -1,15 +1,53 @@
 import React from "react";
 
-const TodoForm = (props) => {
-  
-    const getInputValue = () =>{
-        props.setInputValue(props.inputValue);
+const TodoForm = ({ setInputValue, inputValue, todos }) => {
+  const getInputValue = (event) => {
+    setInputValue(event.target.value);
+  };
+ 
+  const createTodoStore = () => {
+    let todoStore = JSON.parse(localStorage.getItem("todos"));
+    if (todoStore === null) {
+      localStorage.setItem("todos", JSON.stringify(todos));
+      return todoStore;
+    } else {
+      return todoStore;
     }
-    return (
+  };
+
+  let todoStore = createTodoStore();
+
+  const submitTodos = (event) => {
+    event.preventDefault();
+    let newTodoList = [
+      ...todos,
+      {
+        id: Math.random(100),
+        name: inputValue,
+      }
+    ];
+    if (inputValue.trim().length !== 0 ) {
+     
+      todoStore.push(...newTodoList)
+      // console.log(todoStore);
+      localStorage.setItem("todos", JSON.stringify(todoStore));
+      window.location.reload();
+    } else {
+      alert("Your todo is empty");
+      return;
+    }
+  };
+  return (
     <>
-      <form>
-        <input type="text" placeholder="Type your next task" onChange = {getInputValue()}/>
-        <button type="submit">Add ToDo</button>
+      <form onSubmit={submitTodos}>
+        <input
+          type="text"
+          name="todo"
+          value={inputValue}
+          id="todo-input"
+          onChange={getInputValue}
+        />
+        <button className="add-new-btn" type="submit">Add a new todo</button>
       </form>
     </>
   );

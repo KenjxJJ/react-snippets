@@ -5,10 +5,14 @@ import Todos from "./components/Todos";
 function App() {
 
   const [ inputValue, setInputValue ] = useState("");
+  const [ todos ] =useState([]);
+ 
   return (
     <div className="App">
       <div className="App-header">
-        <TodoForm inputValue={inputValue} setInputValue ={setInputValue}/>
+        <h1 className="header">ToDo App</h1>
+        <TodoForm inputValue={inputValue} setInputValue ={setInputValue}
+         todos={todos}/>
         <Todos/>
       </div>
     </div>
