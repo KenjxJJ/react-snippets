@@ -32,4 +32,28 @@ body {
   color: var(--color-white);
 }
 
+input{
 
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  display: block;
+  width: 56vw;
+  max-width: 69vw;
+  padding: 15px;
+}
+
+ button {
+   margin: .3rem 0rem;
+  position: relative;
+  background-color: #04f104;
+  color: rgb(34, 86, 255);
+  box-sizing: border-box;
+  height: auto;
+  display: block;
+  width: 9rem;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid #30303054;
+  border-radius: 2rem;
+}
